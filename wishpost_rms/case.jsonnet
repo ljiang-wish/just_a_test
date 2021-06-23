@@ -1,5 +1,5 @@
-local field = import 'lib/field.libsonnet';
-local types = import 'lib/types.libsonnet';
+123456
+234567
 {
 	alias: "Case",
 	indexes: [
@@ -17,23 +17,23 @@ local types = import 'lib/types.libsonnet';
 		},
 	],
 	fields: { 
-		ri: field("review_ids", type=types.LIST(types.STRING)),
+		_id: field("id", type=types.OBJECT_ID),
+		ct: field("created_time", type=types.DATE),
 		dri: field("display_review_id", type=types.STRING),
-		rs: field("review_source", type=types.INT),
-		rugi: field("risk_user_group_id", type=types.STRING),
+		jt: field("judgement_time", type=types.DATE),
+		lu: field("last_updated", type=types.DATE),
 		p: field("priority", type=types.INT),
 		r: field("reviewer", type=types.STRING),
-		jt: field("judgement_time", type=types.DATE),
-		s: field("status", type=types.INT),
-		rt: field("review_tracks", type="[]wishpost_rms.casetrack"),
-		ct: field("created_time", type=types.DATE),
-		lu: field("last_updated", type=types.DATE),
 		ra: field("risk_app", type=types.INT),
-		re: field("risk_event", type=types.INT),
 		rcgi: field("ruleset_config_group_id", type=types.STRING),
+		re: field("risk_event", type=types.INT),
+		ri: field("review_ids", type=types.LIST(types.STRING)),
 		ril: field("ruleset_id_list", type=types.LIST(types.STRING)),
 		rril: field("rule_id_list", type=types.LIST(types.STRING)),
+		rs: field("review_source", type=types.INT),
+		rt: field("review_tracks", type="[]wishpost_rms.casetrack"),
+		rugi: field("risk_user_group_id", type=types.STRING),
+		s: field("status", type=types.INT),
 		sc: field("score", type=types.INT),
-		_id: field("id", type=types.OBJECT_ID),
 	},
 }
