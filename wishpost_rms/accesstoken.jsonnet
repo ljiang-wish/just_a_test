@@ -1,5 +1,5 @@
-local field = import 'lib/field.libsonnet';
-local types = import 'lib/types.libsonnet';
+123456
+234567
 {
 	alias: "AccessToken",
 	indexes: [
@@ -14,16 +14,16 @@ local types = import 'lib/types.libsonnet';
 		},
 	],
 	fields: { 
-		u: field("user_id", type=types.STRING, required=true),
-		c: field("client_id", type=types.STRING, required=true),
+		_id: field("id", type=types.OBJECT_ID),
+		a: field("access_code", type=types.STRING),
 		ac: field("authorization_code", type=types.STRING),
 		ace: field("auth_code_expiry_time", type=types.DATE),
-		acr: field("redeemed", type=types.BOOL),
-		a: field("access_code", type=types.STRING),
 		acet: field("access_code_expiry_time", type=types.DATE),
+		acr: field("redeemed", type=types.BOOL),
+		c: field("client_id", type=types.STRING, required=true),
 		r: field("revoked", type=types.BOOL, required=true),
 		rr: field("revoke_reason", type=types.STRING),
 		s: field("scopes", type=types.LIST(types.INT)),
-		_id: field("id", type=types.OBJECT_ID),
+		u: field("user_id", type=types.STRING, required=true),
 	},
 }
