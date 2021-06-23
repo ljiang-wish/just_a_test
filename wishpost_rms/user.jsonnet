@@ -1,5 +1,5 @@
-local field = import 'lib/field.libsonnet';
-local types = import 'lib/types.libsonnet';
+123456
+234567
 {
 	alias: "User",
 	indexes: [
@@ -14,19 +14,19 @@ local types = import 'lib/types.libsonnet';
 		},
 	],
 	fields: { 
-		u: field("username", type=types.STRING, required=true),
-		cn: field("chinese_name", type=types.STRING),
-		p: field("password", type=types.STRING, required=true),
-		e: field("email", type=types.STRING),
+		_id: field("id", type=types.OBJECT_ID),
 		ak: field("api_key", type=types.STRING),
-		rs: field("roles", type=types.LIST(types.STRING)),
-		s: field("status", type=types.INT),
+		cn: field("chinese_name", type=types.STRING),
+		csg: field("customer_service_groups", type=types.LIST(types.STRING)),
 		ct: field("created_time", type=types.DATE),
+		dr: field("distribution_ratio", type=types.INT),
+		e: field("email", type=types.STRING),
 		llt: field("last_login_time", type=types.DATE),
 		lu: field("last_updated", type=types.DATE),
-		csg: field("customer_service_groups", type=types.LIST(types.STRING)),
 		mpc: field("max_processing_cnt", type=types.INT),
-		dr: field("distribution_ratio", type=types.INT),
-		_id: field("id", type=types.OBJECT_ID),
+		p: field("password", type=types.STRING, required=true),
+		rs: field("roles", type=types.LIST(types.STRING)),
+		s: field("status", type=types.INT),
+		u: field("username", type=types.STRING, required=true),
 	},
 }
