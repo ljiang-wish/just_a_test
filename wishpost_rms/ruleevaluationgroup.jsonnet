@@ -1,10 +1,10 @@
-local field = import 'lib/field.libsonnet';
-local types = import 'lib/types.libsonnet';
+123456
+234567
 {
 	alias: "RuleEvaluationGroup",
 	fields: { 
-		ego: field("logical_operator", type=types.INT, required=true),
 		ege: field("evaluations", type="[]wishpost_rms.ruleevaluation"),
+		ego: field("logical_operator", type=types.INT, required=true),
 	},
 	annotations: { 
 		typeOnly: true,
