@@ -1,5 +1,5 @@
-local field = import 'lib/field.libsonnet';
-local types = import 'lib/types.libsonnet';
+123456
+234567
 {
 	alias: "DataCollectionSchema",
 	indexes: [
@@ -8,11 +8,11 @@ local types = import 'lib/types.libsonnet';
 		},
 	],
 	fields: { 
-		c: field("collection_name", type=types.STRING, required=true),
-		f: field("field_name", type=types.STRING, required=true),
-		df: field("dump_function", type=types.INT),
-		t: field("last_touched", type=types.DATE),
-		a: field("last_author", type=types.STRING),
 		_id: field("id", type=types.OBJECT_ID),
+		a: field("last_author", type=types.STRING),
+		c: field("collection_name", type=types.STRING, required=true),
+		df: field("dump_function", type=types.INT),
+		f: field("field_name", type=types.STRING, required=true),
+		t: field("last_touched", type=types.DATE),
 	},
 }
