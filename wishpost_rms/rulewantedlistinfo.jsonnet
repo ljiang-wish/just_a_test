@@ -1,5 +1,5 @@
-123456
-234567
+local field = import 'lib/field.libsonnet';
+local types = import 'lib/types.libsonnet';
 {
 	alias: "RuleWantedListInfo",
 	indexes: [
