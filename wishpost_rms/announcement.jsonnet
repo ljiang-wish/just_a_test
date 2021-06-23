@@ -1,5 +1,5 @@
-local field = import 'lib/field.libsonnet';
-local types = import 'lib/types.libsonnet';
+123456
+234567
 {
 	alias: "Announcement",
 	indexes: [
@@ -14,15 +14,15 @@ local types = import 'lib/types.libsonnet';
 		},
 	],
 	fields: { 
-		t: field("title", type=types.STRING),
-		s: field("status", type=types.INT),
-		to: field("to", type=types.INT),
-		d: field("draft", type=types.BOOL, required=true),
-		c: field("content", type=types.STRING, required=true),
-		ats: field("attachments", type="[]wishpost_rms.annattachment"),
-		tl: field("text_list", type=types.LIST(types.STRING)),
-		u: field("user", type=types.OBJECT_ID),
-		gt: field("generate_time", type=types.DATE),
 		_id: field("id", type=types.OBJECT_ID),
+		ats: field("attachments", type="[]wishpost_rms.annattachment"),
+		c: field("content", type=types.STRING, required=true),
+		d: field("draft", type=types.BOOL, required=true),
+		gt: field("generate_time", type=types.DATE),
+		s: field("status", type=types.INT),
+		t: field("title", type=types.STRING),
+		tl: field("text_list", type=types.LIST(types.STRING)),
+		to: field("to", type=types.INT),
+		u: field("user", type=types.OBJECT_ID),
 	},
 }
