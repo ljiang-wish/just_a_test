@@ -1,5 +1,5 @@
-local field = import 'lib/field.libsonnet';
-local types = import 'lib/types.libsonnet';
+123456
+234567
 {
 	alias: "TableLastUpdated",
 	fields: { 
